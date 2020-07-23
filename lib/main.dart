@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import "./question.dart";
+import "./answer.dart";
 
 /*
 ***NOTES***
@@ -42,6 +43,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.green,
           title: Text(
             "My First App",
           ),
@@ -50,22 +52,9 @@ class _MyAppState extends State<MyApp> {
           Question(
             questions[_questionIndex],
           ), // list.elementAt()
-          RaisedButton(
-            child: Text("Answer 1"),
-            onPressed: _answerQuestion,
-          ),
-          RaisedButton(
-            child: Text("Answer 2"),
-            onPressed: () => print(
-                "Anonymous Function - Answer 2 Chosen"), //Anonymous Function
-          ),
-          RaisedButton(
-            child: Text("Answer 3"),
-            onPressed: () {
-              print(
-                  "Anonymous Function - Answer 2 Chosen"); //Anonymous Function
-            },
-          ),
+          Answer(_answerQuestion),
+          Answer(_answerQuestion),
+          Answer(_answerQuestion),
         ]), // Row or Column
       ),
     );
