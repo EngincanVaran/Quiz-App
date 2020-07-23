@@ -29,15 +29,23 @@ class _MyAppState extends State<MyApp> {
 
   void _answerQuestion() {
     setState(() {
-      _questionIndex += 1;
+      if (_questionIndex < 4)
+        _questionIndex += 1;
+      else {
+        _questionIndex = 0;
+        print("Debugger --> Out of Questions!");
+      }
     });
-    print("Debugger --> Answered");
+    print("Debugger --> Answered with Button.");
   }
 
   Widget build(BuildContext context) {
     var questions = [
       "What's your favorite color?",
       "What's your favorite animal?",
+      "What's your favorite plant?",
+      "What's your favorite course?",
+      "What's your favorite teacher?",
     ];
 
     return MaterialApp(

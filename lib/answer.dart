@@ -12,7 +12,12 @@ class Answer extends StatelessWidget {
       margin: EdgeInsets.only(left: 10, right: 10),
       child: RaisedButton(
         color: Colors.deepOrange,
-        child: Text("Bla Bla"),
+        child: Text(
+          "Bla Bla",
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
         onPressed: selectHandler,
       ),
     );
