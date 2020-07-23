@@ -1,5 +1,15 @@
 import 'package:flutter/material.dart';
 
+import "./question.dart";
+
+/*
+***NOTES***
+
+--> "_" makes it private in the specific .dart file
+
+
+*/
+
 void main() {
   runApp(MyApp());
 }
@@ -9,24 +19,24 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> {
-  int questionIndex = 0;
+class _MyAppState extends State<MyApp> {
+  int _questionIndex = 0;
 
-  void answerQuestion() {
+  void _answerQuestion() {
     setState(() {
-      questionIndex += 1;
+      _questionIndex += 1;
     });
     print("Debugger --> Answered");
   }
 
   Widget build(BuildContext context) {
     var questions = [
-      "What's your favorite color",
-      "What's your favorite animal",
+      "What's your favorite color?",
+      "What's your favorite animal?",
     ];
 
     return MaterialApp(
@@ -37,12 +47,12 @@ class MyAppState extends State<MyApp> {
           ),
         ),
         body: Column(children: [
-          Text(
-            questions[questionIndex],
+          Question(
+            questions[_questionIndex],
           ), // list.elementAt()
           RaisedButton(
             child: Text("Answer 1"),
-            onPressed: answerQuestion,
+            onPressed: _answerQuestion,
           ),
           RaisedButton(
             child: Text("Answer 2"),
