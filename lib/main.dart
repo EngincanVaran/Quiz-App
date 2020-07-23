@@ -18,10 +18,7 @@ class MyAppState extends State<MyApp> {
 
   void answerQuestion() {
     setState(() {
-      // ignore: unnecessary_statements
-      () {
-        questionIndex += 1;
-      };
+      questionIndex += 1;
     });
     print("Debugger --> Answered");
   }
