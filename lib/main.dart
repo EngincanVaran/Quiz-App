@@ -8,6 +8,12 @@ void main() {
 
 class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
+    /*
+    var Questions = [
+      "What's your favorite color",
+      "What's your favorite animal",
+    ];
+    */
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -15,7 +21,21 @@ class MyApp extends StatelessWidget {
             "My First App",
           ),
         ),
-        body: Text("This is a body text."),
+        body: Column(children: [
+          Text("The Question!"),
+          RaisedButton(
+            child: Text("Answer 1"),
+            onPressed: null,
+          ),
+          RaisedButton(
+            child: Text("Answer 2"),
+            onPressed: null,
+          ),
+          RaisedButton(
+            child: Text("Answer 3"),
+            onPressed: null,
+          ),
+        ]), // Row or Column
       ),
     );
   }
