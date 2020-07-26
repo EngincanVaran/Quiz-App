@@ -1,6 +1,8 @@
 # Quiz_App
 
-A new Flutter project.
+A simple Flutter project in order to learn the basics of Flutter & Dart. 
+
+You can test the app in both iOS and Android.
 
 ## Getting Started
 
